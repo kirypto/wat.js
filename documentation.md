@@ -53,11 +53,8 @@ This results in `0`. No good explanation, just "because javascript"
 
 Code: `_.$ = ![][{}]-[]`  
 Explanation:  
-`[][{}]` creates an empty list and index it with an empty object. This is valid in javascript, and results with
-`undefined`. `!undefined` (or `![][{}]`) in javscript results in `true`. When you subtract one thing with
-another, javascript often tries to *repair* this by converting both to integers. `[]` converts to an empty
-string, which converts to an integer resulting in `0`. This now gives us `true - 0 `, which converts `true` to
-an integer, giving `1 - 0`, resulting in `1`.
+`~` is the bitwise not operator. `~[]` appears to cast consider the empty list to be `0`, thus giving `~0`. This
+results in `-1`. Multiplying that by negative one (`-~[]`) results in one.
 
 
 ### Literal Empty String
