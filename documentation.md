@@ -10,7 +10,7 @@
     -   `""`   -->  `_.__`  [*link*](#literal-empty-string)
     -   `","`  -->  `_._$`  [*link*](#literal-comma-character)
     -   `"-"`  -->  `_.$_`  [*link*](#literal-dash-character)
-* * *
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
 -   Operators
     -   Ternary Operator  -->  `$.__(conditional, trueVal, falseVal)` [*link*](#ternary-operator)  
         *Summary*: Returns either `trueVal` or `falseVal` based on the value of `conditional`  
@@ -18,7 +18,7 @@
         -   `conditional` :: `boolean`  | used to determine return value
         -   `trueVal`     :: `any type` | the value returned if conditional is true
         -   `falseVal`    :: `any type` | returned if conditional is false
-        * * *
+        *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
     -   Iteration Function  -->  `$.$$(startVal, targetVal, comparator, mutator, item, extractor, joiner, baseVal)`
         [*link*](#iteration-function)  
         *Summary*: General case iteration function, designed to handle any loop requiring situation  
@@ -36,8 +36,16 @@
         -   `joiner`     :: `funct(currVal, recursiveVal)` | a function that, given the current loop value and the next
             loop value (built recursively upwards), joins the two values *(add them, insert into list, etc.)*
         -   `baseVal`    :: `any type`                     | the value to return once the comparator returns false
-        * * *
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+-   Types
+    -   Array  -->  `$$._()` [*link*](#array)
+        -   Constructor  -->  `$$._()`
+        -   Lenth        -->  `$$._._(arr)` or `arr._()`
+        -   Insert At    -->  `$$._.__(arr, index, value)` or `arr.__(index, value)`
+        -   Prepend      -->  `$$._.___(arr, value)` or `arr.___(value)`
+        -   Append       -->  `$$._.__$(arr, value)` or `arr.__$(value)`
 
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
 ## Literals
 
 ### Literal Zero
@@ -78,6 +86,7 @@ Explanation:
 `TODO`
 
 
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
 ## Operators
 
 ### Ternary Operator
@@ -92,3 +101,15 @@ Code: `$.$$ = ($_$,$_$_,$_$$,$_$__,$_$_$,$_$$_,$_$$$,$_$_$_)=>(($.__($_$$($_$,$_
 $_$__($_$),$_$_,$_$$,$_$__,$_$_$,$_$$_,$_$$$,$_$_$_))),()=>($_$_$_)))())`  
 Explanation:
 `TODO`
+
+
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+## Types
+
+### Array
+
+-   Constructor  -->  `$$._()`
+-   Lenth        -->  `$$._._(arr)` or `arr._()`
+-   Insert At    -->  `$$._.__(arr, index, value)` or `arr.__(index, value)`
+-   Prepend      -->  `$$._.___(arr, value)` or `arr.___(value)`
+-   Append       -->  `$$._.__$(arr, value)` or `arr.__$(value)`
