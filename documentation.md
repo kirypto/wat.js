@@ -59,10 +59,10 @@ This results in `0`. No good explanation, just "because javascript"
 
 ### Literal One
 
-Code: `_.$ = ![][{}]-[]`  
+Code: `_.$ = []-(-!-[])`  
 Explanation:  
-`~` is the bitwise not operator. `~[]` appears to cast consider the empty list to be `0`, thus giving `~0`. This
-results in `-1`. Multiplying that by negative one (`-~[]`) results in one.
+`-[]` evaluates to `-0`, so `!-[]` evaluates to `true`, and `-true` is `-1`, so finally `[]-(-1)` is `1` because the
+empty list is converted to `0`
 
 
 ### Literal Empty String
