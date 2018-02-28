@@ -1,5 +1,6 @@
 # wat.js
-A testament to the beauty that is Javascript
+
+_A Truly Symbolic Language_
 
 
 [wat.js Documentation](documentation.md)
