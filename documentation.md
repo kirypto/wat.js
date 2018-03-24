@@ -40,7 +40,7 @@
 -   Types
     -   Array  -->  `$$._()` [*link*](#array)
         -   Constructor  -->  `$$._()`
-        -   Lenth        -->  `$$._._(arr)` or `arr._()`
+        -   Length       -->  `$$._._(arr)` or `arr._()`
         -   Insert At    -->  `$$._.__(arr, index, value)` or `arr.__(index, value)`
         -   Prepend      -->  `$$._.___(arr, value)` or `arr.___(value)`
         -   Append       -->  `$$._.__$(arr, value)` or `arr.__$(value)`
