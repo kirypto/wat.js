@@ -103,10 +103,10 @@ describe("Wat Arrays", function () {
         let array = WatArray();
 
         // Act
-        let actual = WatArray.__(array, 0, 4);
+        WatArray.__(array, 0, 4);
 
         // Assert
-        expect(actual[0]).toBe(4);
+        expect(array[0]).toBe(4);
     });
 
     it('array.__(array,index,value) :: insert :: should contain value into position zero of new array', function () {
@@ -114,9 +114,43 @@ describe("Wat Arrays", function () {
         let array = WatArray();
 
         // Act
-        let actual = array.__(0, 4);
+        array.__(0, 4);
 
         // Assert
-        expect(actual[0]).toBe(4);
+        expect(array[0]).toBe(4);
+    });
+
+    it('WatArray.__(array,index,value) :: insert :: should contain correctly populated values', function () {
+        // Arrange
+        let array = WatArray();
+
+        // Act
+        WatArray.__(array, 0, 'b');
+        WatArray.__(array, 1, 'd');
+        WatArray.__(array, 1, 'c');
+        WatArray.__(array, 0, 'a');
+
+        // Assert
+        expect(array[0]).toBe('a');
+        expect(array[1]).toBe('b');
+        expect(array[2]).toBe('c');
+        expect(array[3]).toBe('d');
+    });
+
+    it('array.__(array,index,value) :: insert :: should contain correctly populated values', function () {
+        // Arrange
+        let array = WatArray();
+
+        // Act
+        array.__(0, 'b');
+        array.__(1, 'd');
+        array.__(1, 'c');
+        array.__(0, 'a');
+
+        // Assert
+        expect(array[0]).toBe('a');
+        expect(array[1]).toBe('b');
+        expect(array[2]).toBe('c');
+        expect(array[3]).toBe('d');
     });
 });
