@@ -17,7 +17,10 @@ _A Truly Symbolic Language_
     - `jasmine`
     - No to `Require.js`
     - Chrome
-    - `test/**/*.test.js`
+    - Enter the following for locations of source and test files:
+        - `src/wat.js`
+        - `src/**/wat*.js`
+        - `test/**/*.test.js`
     - No exclusions
     - No to run tests on file change
 - Create a run configuration with the following:
