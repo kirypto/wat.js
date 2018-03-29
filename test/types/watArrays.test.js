@@ -153,4 +153,30 @@ describe("Wat Arrays", function () {
         expect(array[2]).toBe('c');
         expect(array[3]).toBe('d');
     });
+
+    it('WatArray.__$(array,value) :: append :: should contain value at end of array', function () {
+        // Arrange
+        let array = WatArray();
+        WatArray.__(array, 0, 'a');
+        WatArray.__(array, 1, 'b');
+
+        // Act
+        WatArray.__$(array, 'c');
+
+        // Assert
+        expect(array[2]).toBe('c');
+    });
+
+    it('array.__$(value) :: append :: should contain value at end of array', function () {
+        // Arrange
+        let array = WatArray();
+        array.__(0, 'a');
+        array.__(1, 'b');
+
+        // Act
+        array.__$('c');
+
+        // Assert
+        expect(array[2]).toBe('c');
+    });
 });
