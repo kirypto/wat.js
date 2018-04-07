@@ -2,6 +2,8 @@
 
 # Documentation
 
+*_NOTE: This documentation is (slightly) out of date. It will be updated in the near future_*
+
 ## Contents
 
 -   Literals
