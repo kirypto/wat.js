@@ -179,4 +179,30 @@ describe("Wat Arrays", function () {
         // Assert
         expect(array[2]).toBe('c');
     });
+
+    it('WatArray.___(array,value) :: prepend :: should contain value at beginning of array', function () {
+        // Arrange
+        let array = WatArray();
+        WatArray.__(array, 0, 'b');
+        WatArray.__(array, 1, 'c');
+
+        // Act
+        WatArray.___(array, 'a');
+
+        // Assert
+        expect(array[0]).toBe('a');
+    });
+
+    it('array.___(value) :: prepend :: should contain value at beginning of array', function () {
+        // Arrange
+        let array = WatArray();
+        array.__(0, 'b');
+        array.__(1, 'c');
+
+        // Act
+        array.___('a');
+
+        // Assert
+        expect(array[0]).toBe('a');
+    });
 });
