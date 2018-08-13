@@ -205,4 +205,36 @@ describe("Wat Arrays", function () {
         // Assert
         expect(array[0]).toBe('a');
     });
+
+    it('WatArray.$$(array,function) :: foreach :: should call function for each value', function () {
+        // Arrange
+        let array = WatArray();
+        WatArray.__$(array, 2);
+        WatArray.__$(array, 3);
+        WatArray.__$(array, 5);
+        WatArray.__$(array, 8);
+        let sum = 0;
+
+        // Act
+        WatArray.$$(array, (value) => sum += value);
+
+        // Assert
+        expect(sum).toBe(18);
+    });
+
+    it('array.$$(function) :: foreach :: should call function for each value', function () {
+        // Arrange
+        let array = WatArray();
+        array.__$(array, 2);
+        array.__$(array, 3);
+        array.__$(array, 5);
+        array.__$(array, 8);
+        let sum = 0;
+
+        // Act
+        array.$$((value) => sum += value);
+
+        // Assert
+        expect(sum).toBe(18);
+    });
 });
