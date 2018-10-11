@@ -13,6 +13,7 @@ _A Truly Symbolic Language_
     - `npm install karma-jasmine`
     - `npm install jasmine-core`
     - `npm install karma-chrome-launcher`
+    - `npm install -g karma-cli`
 - Run `karma init karma.conf.js` and use the following configurations:
     - `jasmine`
     - No to `Require.js`
