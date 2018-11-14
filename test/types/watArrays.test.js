@@ -225,10 +225,10 @@ describe("Wat Arrays", function () {
     it('array.$$(function) :: foreach :: should call function for each value', function () {
         // Arrange
         let array = WatArray();
-        array.__$(array, 2);
-        array.__$(array, 3);
-        array.__$(array, 5);
-        array.__$(array, 8);
+        array.__$(2);
+        array.__$(3);
+        array.__$(5);
+        array.__$(8);
         let sum = 0;
 
         // Act
