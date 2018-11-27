@@ -9,13 +9,27 @@
   <script src="../../src/utilities/watUtils.js"></script>
   <script src="../../src/types/watArrays.js"></script>
   <script type="text/javascript">
-    let arr = $_$.$$._();
-    arr.__$(1);
-    arr.__$(2);
-    arr.__$(3);
-    arr.__$(4);
 
+      function processInput() {
+          let val = document.getElementById("input").value;
+          let arr = $_$.$$._();
 
+          for (let i = 0; i < val.length; i++) {
+              arr.__$(val[i]);
+          }
+
+          arr.$$(function (item) {
+              document.getElementById("output").append(item + "; ");
+          });
+      }
   </script>
+  <div>
+    <label for="input">Text Input</label><br><textarea id="input">Hello, Wat!</textarea>
+    <button id="go" onclick="processInput()">Go!</button>
+  </div>
+  <div>Output:
+    <br>
+    <div id="output"></div>
+  </div>
 </body>
 </html>
