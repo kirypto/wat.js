@@ -12,14 +12,49 @@
 
       function processInput() {
           let val = document.getElementById("input").value;
-          let arr = $_$.$$._();
 
-          for (let i = 0; i < val.length; i++) {
-              arr.__$(val[i]);
-          }
+          // Split input string by spaces
+          let splitString = $_$.$.$$(
+              // startVal -> Start at 0
+              +[],
+              // targetVal -> Stop at the length of the string
+              val.length,
+              // comparator -> Continue as long as the current loop value is less than the target
+              ($_$_, $_$$) => $_$_ < $_$$,
+              // mutator -> Increase current loop value by 1
+              ($_$_) => $_$_ + ![][{}],
+              // item -> Iterate over the string
+              val,
+              // extractor -> Return a list with two values:
+              //               - a boolean, true if the current character in the string is a space, else false
+              //               - the current character in the string
+              ($_$_, $_$$) => [$_$_[$_$$] === " ", $_$_[$_$$]],
+              // joiner -> Read the first value in the the current value (returned from the extractor)
+              //            - if true (character is space), prepend a new string to the recursive list of already split
+              //              strings (tail recursion)
+              //            - if false, prepend the current character to the first string in recursive list
+              ($_$_, $_$$) => {
+                  if ($_$_[+[]]) {
+                      $_$$.___([]+[]);
+                      return $_$$;
+                  } else {
+                      $_$$[+[]] = $_$_[+![][{}]] + $_$$[+[]];
+                      return $_$$;
+                  }
+              },
+              // baseVal -> Return WatArray with single empty string
+              (($_$_)=>{
+                $_$_ = $_$.$$._();
+                $_$_.__$([]+[]);
+                return $_$_;
+               })()
+          );
 
-          arr.$$(function (item) {
-              document.getElementById("output").append(item + "; ");
+          splitString.$$(function (item) {
+              let liElem = document.createElement("LI");
+              let text = document.createTextNode(item);
+              liElem.appendChild(text);
+              document.getElementById("output").appendChild(liElem);
           });
       }
   </script>
@@ -29,7 +64,7 @@
   </div>
   <div>Output:
     <br>
-    <div id="output"></div>
+    <ul id="output"></ul>
   </div>
 </body>
 </html>
