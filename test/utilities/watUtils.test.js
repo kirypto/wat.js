@@ -25,61 +25,55 @@ describe("Wat Utilities", function () {
         expect(actual).toBe(undefined);
     });
 
-    it('WatUtils.$$(...) :: iteration function :: should correctly sum all numbers from 1 to 10', function () {
+    it('WatUtils.$(...) :: iteration function :: should correctly sum all numbers from 1 to 10', function () {
         // Act
         let startVal = 0;
         let targetVal = 10;
-        let comparatorFunc = (currVal, targetVal) => currVal <= targetVal;
+        let actual = 0;
+        let comparatorFunc = (currVal) => currVal <= targetVal;
         let mutatorFunc = (currVal) => currVal + 1;
-        let item = null;
-        let extractorFunc = (item, currVal) => currVal;
-        let joinerFunc = (currVal, recursiveResult) => currVal + recursiveResult;
-        let baseVal = 0;
+        let actionToPerformFunc = (currVal) => actual += currVal
 
         // Arrange
-        let actual = WatUtils.$$(startVal, targetVal, comparatorFunc, mutatorFunc, item, extractorFunc, joinerFunc, baseVal);
+        WatUtils.$(startVal, comparatorFunc, mutatorFunc, actionToPerformFunc);
 
         // Assert
         expect(actual).toBe(55);
     });
 
-    it('WatUtils.$$(...) :: iteration function :: should correctly sum all numbers from in `item`', function () {
+    it('WatUtils.$(...) :: iteration function :: should correctly sum subset of numbers in list', function () {
         // Act
-        let startVal = 0;
-        let targetVal = 5;
-        let comparatorFunc = (currVal, targetVal) => currVal < targetVal;
+        let startVal = 3;
+        let targetVal = 8;
+        let actual = 0;
+        let list = [-10,-10,-10,1,1,1,1,1,-10,-10];
+        let comparatorFunc = (currVal) => currVal < targetVal;
         let mutatorFunc = (currVal) => currVal + 1;
-        let item = [2,4,6,8,10];
-        let extractorFunc = (item, currVal) => item[currVal];
-        let joinerFunc = (currVal, recursiveResult) => currVal + recursiveResult;
-        let baseVal = 0;
+        let actionToPerformFunc = (currVal) => actual += list[currVal];
 
         // Arrange
-        let actual = WatUtils.$$(startVal, targetVal, comparatorFunc, mutatorFunc, item, extractorFunc, joinerFunc, baseVal);
+        WatUtils.$(startVal, comparatorFunc, mutatorFunc, actionToPerformFunc);
 
         // Assert
-        expect(actual).toBe(30);
+        expect(actual).toBe(5);
     });
 
-    it('WatUtils.$$(...) :: iteration function :: should join all strings in `item`', function () {
+    it('WatUtils.$(...) :: iteration function :: should join all strings in list', function () {
         // Act
         let startVal = 0;
-        let targetVal = 5;
-        let comparatorFunc = (currVal, targetVal) => currVal < targetVal;
-        let mutatorFunc = (currVal) => currVal + 1;
         let item = ["Kirk", "Spock", "Bones", "Scottie", "Sulu"];
-        let extractorFunc = (item, currVal) => item[currVal];
-        let joinerFunc = (currVal, recursiveResult) => {
-            if (recursiveResult === "") {
-                return currVal;
-            } else {
-                return currVal + ", " + recursiveResult;
-            }
-        };
-        let baseVal = "";
+        let comparatorFunc = (currVal) => item[currVal] !== undefined;
+        let mutatorFunc = (currVal) => currVal + 1;
+        let actual = ""
 
         // Arrange
-        let actual = WatUtils.$$(startVal, targetVal, comparatorFunc, mutatorFunc, item, extractorFunc, joinerFunc, baseVal);
+        WatUtils.$(startVal, comparatorFunc, mutatorFunc, (currVal) => {
+            actual += item[currVal];
+            if (currVal < item.length - 1) {
+                actual += ", ";
+            }
+            return actual;
+        });
 
         // Assert
         expect(actual).toBe("Kirk, Spock, Bones, Scottie, Sulu");
