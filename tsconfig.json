@@ -4,7 +4,8 @@
     "target": "es5",
     "sourceMap": true,
     "types": [
-      "mocha"
+      "mocha",
+      "node"
     ]
   },
   "exclude": [
