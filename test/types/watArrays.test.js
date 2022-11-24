@@ -15,6 +15,7 @@ describe("Wat Arrays", function () {
         let array = WatArray();
 
         // Act
+        $_$.$$._._
         let actual = WatArray._(array);
 
         // Assert
