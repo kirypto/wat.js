@@ -29,7 +29,7 @@ $_$ = {
          * @param _$ Function(*), A function that, given the current iteration value, returns the next iteration value
          * @param ___ Function(*), A function that, given the current iteration value, performs some desired operation
          */
-        $__.$ = (_, __, _$, ___) => ((_$_) => {
+        $__.$$ = (_, __, _$, ___) => ((_$_) => {
             $__.__(
                 __(_$_),
                 () => ___(_$_),
@@ -39,7 +39,7 @@ $_$ = {
 
             $__.__(
                 __(_$_),
-                () => $__.$(_$(_), __, _$, ___),
+                () => $__.$$(_$(_), __, _$, ___),
                 () => {
                 }
             )()
