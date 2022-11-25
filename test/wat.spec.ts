@@ -19,7 +19,7 @@ describe(`Literals`, () => {
     it(`should have literal container object stored in '${literalContainer}'`, () => {
         // Act
         // assert.equal(wat, 5);
-        const actual = $_$[literalContainer];
+        const actual = $_$._;
 
         // Assert
         assert.typeOf(actual, "object");
