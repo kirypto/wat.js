@@ -26,7 +26,7 @@ describe(`Literals`, () => {
         assert.typeOf(actual, "object");
     });
 
-    const supportedLetters = "abc";
+    const supportedLetters = "abcnorstu";
     for (const letter of supportedLetters) {
         const key: string = lpad(letter.charCodeAt(0).toString(2), "0", 8)
             .replaceAll("0", "_").replaceAll("1", "$");
