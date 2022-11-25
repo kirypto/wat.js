@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "sourceMap": true,
     "types": [
       "mocha",
       "node"
+    ],
+    "lib": [
+      "ES2021.String"
     ]
   },
   "exclude": [
