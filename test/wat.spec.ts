@@ -40,3 +40,24 @@ describe(`Literals`, () => {
         });
     }
 });
+
+describe("Functions", () => {
+    describe("Ternary", () => {
+        it('should return second argument when first argument is true', () => {
+            // Arrange
+            // Act
+            const actual = $_$.$.__(true, "correct", "incorrect (wrong parameter was returned)");
+
+            // Assert
+            assert.equal(actual, "correct");
+        });
+        it('should return third argument when first argument is false', () => {
+            // Arrange
+            // Act
+            const actual = $_$.$.__(true, "correct", "incorrect (wrong parameter was returned)");
+
+            // Assert
+            assert.equal(actual, "correct");
+        });
+    });
+});
