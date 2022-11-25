@@ -34,7 +34,7 @@ describe(`Literals`, () => {
         it(`should have ${letter} stored at ${key}`, () => {
             // Arrange
             // Act
-            const actual = $_$[literalContainer][key];
+            const actual = $_$._[key];
 
             // Assert
             assert.equal(actual, letter);
