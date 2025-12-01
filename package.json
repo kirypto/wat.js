@@ -1,6 +1,9 @@
 {
   "name": "wat-js",
   "version": "0.1.0",
+  "scripts": {
+    "release": "node scripts/release-wat.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "@types/mocha": "^10.0.0",
