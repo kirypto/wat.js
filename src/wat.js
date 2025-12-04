@@ -111,4 +111,4 @@ $_$ = {
 }
 _ = [][-[]]
 
-exports.$_$ = $_$; // Needed for tests, be sure to remove before 'releasing' :P
+module.exports = $_$ // I know, I know, I'll get this to be valid wat.js eventually

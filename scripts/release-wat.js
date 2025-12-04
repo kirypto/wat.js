@@ -10,7 +10,6 @@ content = content
     .replace(/\/\*\*[\s\S]*?\*\//g, '') // Remove multi-line comments (including JSDoc /** ... */)
     .replace(/\/\/.*$/gm, '') // Remove single-line comments
     .replace(/\n\s*\n/g, '\n') // Remove blank lines
-    .replace(/exports\.\$_\$ = \$_\$;.*$/gm, '') // Remove exports line
     .trimEnd(); // Trim trailing whitespace/newlines
 
 const distDir = path.dirname(outputFile);
