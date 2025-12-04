@@ -96,5 +96,6 @@ $_$ = {
         }
     })() || $__)(),
 }
+_ = [][-[]]
 
 exports.$_$ = $_$; // Needed for tests, be sure to remove before 'releasing' :P
