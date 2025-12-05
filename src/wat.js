@@ -109,6 +109,33 @@ $_$ = {
                 _._$$$__$_)
                 ](__)()
         }
+
+        /**
+         * Split String
+         * @param _ String, The string to split
+         * @param __ Char (String of Length 1), The character to split the string at
+         * @returns {*} Returns an array of strings from _ split at __ (containing no instances of __)
+         */
+        $__.$__ = (_, __) => ((_$_) => (() => {
+            _$_ = {
+                $: [],
+                _: [] + [],
+                __: [] - [],
+            }
+            $__.$$([] - [], $ => _[$] !== [][[]], $ => $ + !+[], $ => {
+                $__.__(
+                    _[$] === __,
+                    () => {
+                        _$_.$[_$_.__] = _$_._
+                        _$_.__++
+                        _$_._ = [] + []
+                    },
+                    () => {
+                        _$_._ += _[$]
+                    }
+                )()
+            })
+        })() || _$_.$)()
     })() || $__)(),
 }
 
