@@ -11,6 +11,7 @@ content = content
     .replace(/\/\/.*$/gm, '') // Remove single-line comments
     .replace(/\s+$/gm, '') // Remove white space at the end of the line
     .replace(/\n\s*\n/g, '\n') // Remove blank lines
+    .replace(/ {4}/g, ' ')
     .trimEnd(); // Trim trailing whitespace/newlines
 
 const distDir = path.dirname(outputFile);
