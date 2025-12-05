@@ -174,6 +174,41 @@ $_$ = {
                 _$_ = $__.__(_[$] < _$_, _[$], _$_)
             })
         })() || _$_)()
+
+        /**
+         * Slice
+         * @param _ Array OR String, The item to slice
+         * @param $_ Number OR Undefined, The slice starting position, defaults to 0
+         * @param _$ Number OR Undefined, The slice ending position, defaults to length of the item
+         * @returns {*} An array/string (matching provided type) with the values/chars between start and end
+         */
+        $__._$$_ = (_, $_, _$) => ((_$_) => (($__$) => {
+            $_ ||= [] - []     // Default start to 0
+            _$ ||= $__.__$(_)  // Default end to length of item
+
+            _[~-[]] = +!+[]              // Try assigning a value to index -1
+            $__$ = (_[~-[]] !== [][[]])  // If it worked, it's an array
+            _[~-[]] = [][[]]             // Remove the evidence
+
+            _$_ = {
+                $: $__.__($__$, [], []+[]),  // The return value, default to empty array/string respectively
+                _: [] - []                   // The current index, only need this for array logic
+            }
+
+            $__.$$(
+                $_, // Start at the starting index
+                // Iterate while position < end AND indexed value is defined. Who needs ampersands in javascript?
+                $ => !(!($ < _$) + !(_[$] !== [][[]])),
+                $ => $ + !+[], // Increment by 1
+                $ => {
+                    $__.__($__$, () => {     // It's an Array
+                        _$_.$[_$_._] = _[$]  // Set the value at the current position
+                        _$_._++              // Increment
+                    }, () => {         // It's a String
+                        _$_.$ += _[$]  // Just add the next character
+                    })()
+            })
+        })() || _$_.$)()
     })() || $__)(),
 }
 

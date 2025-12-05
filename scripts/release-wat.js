@@ -9,6 +9,7 @@ let content = fs.readFileSync(inputFile, 'utf8');
 content = content
     .replace(/\/\*\*[\s\S]*?\*\//g, '') // Remove multi-line comments (including JSDoc /** ... */)
     .replace(/\/\/.*$/gm, '') // Remove single-line comments
+    .replace(/\s+$/gm, '') // Remove white space at the end of the line
     .replace(/\n\s*\n/g, '\n') // Remove blank lines
     .trimEnd(); // Trim trailing whitespace/newlines
 
