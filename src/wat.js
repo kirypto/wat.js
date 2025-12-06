@@ -209,6 +209,24 @@ $_$ = {
                     })()
             })
         })() || _$_.$)()
+
+        /**
+         * Index Of
+         * @param _ Array OR String, The item to check
+         * @param __ Value OR Char (respectively), The value/char to check for
+         * @returns {*} The index of the value/char in the item, or -1 if it is not found
+         */
+        $__.__$__ = (_, __) => ((_$_) => ((__$) => {
+            _$_ = ~-[]        // Initialize to -1
+            __$ = $__.__$(_)  // Get the length of input
+
+            // Iterate over the input, finishing early once the index of provided value/char is found
+            $__.$$([]-[], $ => !(!(_$_ < []-[]) + !($ < __$)), $ => $+!+[], $ => {
+                $__.__(_[$] === __, () => { // Found the desired value/char
+                    _$_ = $  // Set the return val
+                }, () => {})()
+            })
+        })() || _$_)()
     })() || $__)(),
 }
 
