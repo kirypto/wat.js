@@ -231,3 +231,10 @@ $_$ = {
 }
 
 module.exports = $_$ // I know, I know, I'll get this to be valid wat.js eventually
+
+/**
+ * Brain dumping this for future
+ * Use a backslash in a string to get a char code from octal: '\101'
+ * Sample idea on how to get the '\101' with wat.js without quotes: (/\\/+[])[1]+$_$._.___$+$_$._.____+$_$._.___$
+ * Idea on maybe how to do it without quotes, (/\101/+[]).split(/\//)
+ */
